@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header class="head">
+        <h1><a class="head__logo" href="index.html"><img src="images/logo.png" alt="로고"></a></h1>
+        <div class="head__ico"><div class="head__ico--bar"></div></div>
+        <nav class="head__nav">
+            <ul>
+                <li><a href="#">COMPANY</a></li>
+                <li><a href="#">CHARACTER</a></li>
+                <li><a href="#">PLACE</a></li>
+                <li><a href="#">RECRUIT</a></li>
+            </ul>
+        </nav>
+        <!--//head__nav-->
+        <div class="head__menu">
+            <ul>
+                <li><a href="#">COMPANY</a></li>
+                <li><a href="#">CHARACTER</a></li>
+                <li><a href="#">PLACE</a></li>
+                <li><a href="#">RECRUIT</a></li>
+            </ul>
+        </div>
+        <!--//head__nav2-->
+    </header>
+    <main class="main">
+        <section class="mainView">
+            <div class="mainView__box">
+                <img src="images/main_visual_pc_v1.png" alt="메인비쥬얼">
+            </div>
+            <!--//mainView__box -->
+            <div class="mainView__scroll">
+                <span class="mainView__scroll--mouse"><em></em></span>
+                <p class="mainView__scroll--text">SCROLL DOWN</p>
+            </div>
+            <!--//mainView__scroll-->
+        </section>
+        <!--//mainView-->
+    </main>
+    <footer>
+
+    </footer>
+
+<script src="js/jquery-3.5.1.js"></script>
+<script>
+    //MOBILE MENU
+jQuery("header .head__ico").click(function() {
+	jQuery(this).toggleClass("active");
+	jQuery("header .head__menu").toggleClass("active");
+
+	if( jQuery(this).hasClass("active") ){
+		$('body,html').css({
+			"overflow-y" : "hidden",
+			"position" : "fixed",
+			"height" : "100%"
+		});
+	}
+	else{
+		$('body,html').css({
+			"overflow-y" : "scroll",
+			"position" : "initial",
+			"height" : "auto"
+		});
+	}
+});
+</script>
+</body>
+</html>

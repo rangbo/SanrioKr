@@ -1,0 +1,232 @@
+.head {
+  background-color: #ffffff;
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+}
+.head h1 {
+  flex: 3;
+  text-align: left;
+}
+.head__logo img {
+  width: 113px;
+}
+.head__ico {
+  display: none;
+}
+.head__ico::after, .head__ico::before, .head__ico--bar {
+  background-color: #000;
+  content: "";
+  display: block;
+  height: 4px;
+  margin: 11px 0;
+  transition: all 0.2s ease-in-out;
+}
+.head__nav {
+  flex: 1;
+  text-align: right;
+}
+.head__nav ul {
+  display: table;
+  table-layout: fixed;
+}
+.head__nav ul li {
+  display: table-cell;
+  padding-right: 70px;
+  font-weight: 500;
+}
+.head__nav li:last-child {
+  padding-right: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .head__menu {
+    display: none;
+  }
+}
+@media (max-width: 1199px) {
+  .head__nav {
+    display: none;
+  }
+  .head__menu.nav_fixed {
+    padding-top: 81px;
+  }
+  .head__ico {
+    display: inline;
+    width: 34px;
+    cursor: pointer;
+    position: absolute;
+    right: 43px;
+  }
+  .head__ico:active {
+    transform: translateY(17px) rotate(135deg);
+  }
+  .head__ico:active:after {
+    transform: translateY(-13px) rotate(-135deg);
+  }
+  .head__ico:active.active div {
+    transform: scale(0);
+  }
+  header .head__menu {
+    position: fixed;
+    width: calc(100% - 40px);
+    height: calc(100% - 210px);
+    right: calc(-100% - 20px);
+    padding: 170px 20px 40px 20px;
+    background: #fff;
+    z-index: 999;
+    transition: all 0.5s ease;
+    opacity: 0;
+  }
+  header .head__menu.active {
+    right: 0;
+    opacity: 1;
+    top: 0;
+  }
+  header .head__menu li a {
+    display: block;
+    width: 100%;
+  }
+  header .head__menu li a:hover, header .head__menu li a:active {
+    color: #4b689f;
+  }
+  header .head__menu li {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 50px;
+    font-size: 2.625rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  header .in_header {
+    border-bottom: solid 1px #ddd;
+    min-height: 100px;
+    padding: 19.5px 42px;
+  }
+  .fb_ico {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@keyframes mouse {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes mouse {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes ani-slg1 {
+  from {
+    transform: translateY(-70px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes ani-slg1 {
+  from {
+    transform: translateY(-70px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes ani-slg2 {
+  from {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes ani-slg2 {
+  from {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.mainView {
+  position: relative;
+}
+.mainView__box {
+  position: relative;
+  width: 100%;
+  height: 758px;
+  background: url("../images/main_visual_bg.jpg") repeat 0 0/50px auto;
+}
+.mainView__box img {
+  max-width: 984px;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  -webkit-animation: ani-slg1 2s ease alternate;
+          animation: ani-slg1 2s ease alternate;
+}
+.mainView__scroll {
+  position: absolute;
+  bottom: 7%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.mainView__scroll--mouse {
+  position: relative;
+  display: block;
+  width: 26px;
+  height: 36px;
+  margin: 0 auto 20px;
+  box-sizing: border-box;
+  border: 2px solid #212121;
+  border-radius: 23px;
+  background: #fff;
+  -webkit-animation: mouse 2s ease infinite;
+  animation: mouse 2s ease infinite;
+}
+.mainView__scroll--mouse em {
+  position: absolute;
+  display: block;
+  top: 29%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  margin: -2px 0 0 -2px;
+  background: #212121;
+  border-radius: 50%;
+  -webkit-animation: mouse 2.5s linear infinite;
+  animation: mouse 2.5s linear infinite;
+}
+.mainView__scroll--text {
+  font-size: 10px;
+  color: #424242;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
