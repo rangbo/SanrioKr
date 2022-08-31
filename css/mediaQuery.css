@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+/* 애니메이션----------------------------------------------*/
+@keyframes mouse{
+	0%{transform:translateY(0);}
+	50%{transform:translateY(15px);}
+	100%{transform:translateY(0px);}
+}
+@-webkit-keyframes mouse{
+	0%{transform:translateY(0);}
+	50%{transform:translateY(15px);}
+	100%{transform:translateY(0);}
+}
+@-moz-keyframes mouse{
+	0%{transform:translateY(0);}
+	50%{transform:translateY(15px);}
+	100%{transform:translateY(0);}
+}
+@-ms-keyframes mouse{
+	0%{transform:translateY(0);}
+	50%{transform:translateY(15px);}
+	100%{transform:translateY(0);}
+}
+@keyframes ani-slg1 {
+    from { transform:translateY(-70px);opacity:0;}
+    to { transform:translateY(0);opacity:1;}
+}
+@-webkit-keyframes ani-slg1 {
+    from { transform:translateY(-70px);opacity:0;}
+    to { transform:translateY(0);opacity:1;}
+}
+@-moz-keyframes ani-slg1 {
+    from { transform:translateY(-70px);opacity:0;}
+    to { transform:translateY(0);opacity:1;}
+}
+@-ms-keyframes ani-slg1 {
+    from { transform:translateY(-70px);opacity:0;}
+    to { transform:translateY(0);opacity:1;}
+}
+@keyframes ani-slg2 {
+    from { transform:translateY(-80px);opacity:0;}
+    to { transform:translateY(0);opacity:1;}
+}
+@-webkit-keyframes ani-slg2 {
+    from { transform:translateY(-80px);opacity:0;}
+    to { transform:translateY(0);opacity:1;}
+}
+@-moz-keyframes ani-slg2 {
+    from { transform:translateY(-80px);opacity:0;}
+    to { transform:translateY(0);opacity:1;}
+}
+@-ms-keyframes ani-slg2 {
+    from { transform:translateY(-80px);opacity:0;}
+    to { transform:translateY(0);opacity:1;}
+}
+/* 미디어쿼리----------------------------------------------*/
+
+/* 태블릿 */
+@media screen and (min-width:1200px){
+    header .head__menu{display:none;}
+}
+@media screen and (max-width: 1199px) {
+	header .head__nav{display:none;}
+	header .head__menu.nav_fixed{padding-top:81px;}
+    header .head__ico {
+		display:inline;
+		width: 39px;
+		cursor:pointer;
+		position: absolute;
+		right: 50px;
+        z-index: 9999;
+	}
+    header .head__ico.active::before{
+        transform: translateY(17px) rotate(135deg);
+    }
+    header .head__ico.active::after {
+        transform: translateY(-13px) rotate(-135deg);
+    }
+    
+    header .head__ico.active > .head__ico--bar {
+        transform: scale(0);
+    }
+	header .head__menu {
+        position: fixed;
+        top:86px;
+        width: 100vw;
+        height: 100vh;
+        right: calc(-100% - 20px);
+        padding: 100px 20px;
+        background: #fff;
+        z-index: 999;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        opacity: 0;
+	}
+	header .head__menu.active {
+		right:0;
+		opacity:1;
+        top: 86px;
+	}
+	header .head__menu li a {
+		display:block;
+		width:100%;
+	}
+	header .head__menu li a:hover,header .head__menu li a:active{color:#4b689f;}
+	header .head__menu li {
+		display:block;
+		margin-right:0;
+		margin-bottom:50px;
+		font-size: 2.625rem;
+        font-weight:500;
+		text-align:center;
+        text-transform:uppercase;
+	}
+    .head{
+        border-bottom:solid 1px #ddd;
+    }
+    main .char{width: 100%;}
+}
+@media screen and (max-width: 1024px) {
+    main .mainView__box--pc img{display: none;}
+    main .mainView__box--mo img{display: block;}
+    main .char__list--text--sub{display: none;}
+    main .com__box{padding:0 5%;}
+    main .recruit{background: url("../images/tbg_recruit.png") no-repeat center;}
+    main .recruit__box{padding:0 2%;}
+}
+@media screen and (max-width: 800px){
+    main .recruit{
+        background-image: url("../images/mbg_recruit.png") no-repeat center;
+        background-size: 90%;
+        background-position: center 30px;
+    }
+    main .recruit__box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 8%;
+    }
+    main .recruit__box--ico{
+        margin-right: 10%;
+    }
+    main .recruit__box--con--sub{display: none;}
+    main .place{
+        background-image: url("../images/mbg_shop.jpg");
+        background-size: cover;
+        padding:55px 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+	html, body {
+		font-size:80%;
+	}
+    .head{padding:20px;}
+    header .head__logo img{
+        max-width: 80%;
+    }
+    header .head__ico{right:20px;}
+    header .head__ico{width:24px;right:20px;}
+    header .head__ico:after,
+    header .head__ico:before,
+    header .head__ico--bar{
+        height:3px;
+        margin:5px 0;
+    }
+    header .head__ico.active:before{
+        transform:translateY(7px) rotate(135deg);
+        -webkit-transform:translateY(7px) rotate(135deg);
+    }
+    header .head__ico.active:after{
+        transform:translateY(-9px) rotate(-135deg);
+        -webkit-transform:translateY(-9px) rotate(-135deg);
+    }
+    main .char__list li{
+        width: calc(49% - 20px);
+    }
+}
+@media screen and (max-width: 600px) {
+    main .recruit__box--con--title{
+        font-size: 1.2rem;
+        word-break: keep-all;
+    }
+}

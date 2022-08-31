@@ -8,11 +8,13 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/font.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/mediaQuery.css">
 </head>
 <body>
     <header class="head">
         <h1><a class="head__logo" href="index.html"><img src="images/logo.png" alt="로고"></a></h1>
-        <div class="head__ico"><div class="head__ico--bar"></div></div>
+        <div class="head__ico" onClick="menuOpen();"><div class="head__ico--bar"></div></div>
         <nav class="head__nav">
             <ul>
                 <li><a href="#">COMPANY</a></li>
@@ -35,7 +37,12 @@
     <main class="main">
         <section class="mainView">
             <div class="mainView__box">
-                <img src="images/main_visual_pc_v1.png" alt="메인비쥬얼">
+                <span class="mainView__box--pc">
+                    <img src="images/main_visual_pc_v1.png" alt="메인비쥬얼PC">
+                </span>
+                <span class="mainView__box--mo">
+                    <img src="images/main_visual_m_v1.png" alt="메인비쥬얼MOBILE">
+                </span>
             </div>
             <!--//mainView__box -->
             <div class="mainView__scroll">
@@ -45,6 +52,288 @@
             <!--//mainView__scroll-->
         </section>
         <!--//mainView-->
+        <section class="char">
+            <h2 class="char__title title">CHARACTER</h2>
+            <button onclick="location.href='#'" class="char__moreBtn longMoreBtn">
+                <span>VIEW MORE</span>
+            </button>
+            <ul class="char__list">
+                <li>
+                    <a href="#" title="헬로키티 바로가기">
+                        <div class="char__list--thumb">
+                            <img src="images/new_main_crt1.png" alt="캐릭터이미지1">
+                            <span><img src="images/new_main_crt1_ov.png" alt="캐릭터이미지2"></span>
+                        </div>
+                        <div class="char__list--text">
+                            <p class="char__list--text--title">헬로키티</p>
+                            <p class="char__list--text--sub">hello kitty</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="마이멜로디 바로가기">
+                        <div class="char__list--thumb">
+                            <img src="images/new_main_crt2.png" alt="캐릭터이미지1">
+                            <span><img src="images/new_main_crt2_ov.png" alt="캐릭터이미지2"></span>
+                        </div>
+                        <div class="char__list--text">
+                            <p class="char__list--text--title">마이멜로디</p>
+                            <p class="char__list--text--sub">MY MELODY</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="쿠로미 바로가기">
+                        <div class="char__list--thumb">
+                            <img src="images/new_main_crt3.png" alt="캐릭터이미지1">
+                            <span><img src="images/new_main_crt3_ov.png" alt="캐릭터이미지2"></span>
+                        </div>
+                        <div class="char__list--text">
+                            <p class="char__list--text--title">쿠로미</p>
+                            <p class="char__list--text--sub">KUROMI</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="폼폼푸린 바로가기">
+                        <div class="char__list--thumb">
+                            <img src="images/new_main_crt4.png" alt="캐릭터이미지1">
+                            <span><img src="images/new_main_crt4_ov.png" alt="캐릭터이미지2"></span>
+                        </div>
+                        <div class="char__list--text">
+                            <p class="char__list--text--title">폼폼푸린</p>
+                            <p class="char__list--text--sub">POMPOMPURIN</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="시나모롤 바로가기">
+                        <div class="char__list--thumb">
+                            <img src="images/new_main_crt5.png" alt="캐릭터이미지1">
+                            <span><img src="images/new_main_crt5_ov.png" alt="캐릭터이미지2"></span>
+                        </div>
+                        <div class="char__list--text">
+                            <p class="char__list--text--title">시나모롤</p>
+                            <p class="char__list--text--sub">CINNAMOROLL</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="리틀트윈스타 바로가기">
+                        <div class="char__list--thumb">
+                            <img src="images/new_main_crt6.png" alt="캐릭터이미지1">
+                            <span><img src="images/new_main_crt6_ov.png" alt="캐릭터이미지2"></span>
+                        </div>
+                        <div class="char__list--text">
+                            <p class="char__list--text--title">리틀트윈스타</p>
+                            <p class="char__list--text--sub" style="text-transform:none;">LittleTwinStars</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="포차코 바로가기">
+                        <div class="char__list--thumb">
+                            <img src="images/new_main_crt7.png" alt="캐릭터이미지1">
+                            <span><img src="images/new_main_crt7_ov.png" alt="캐릭터이미지2"></span>
+                        </div>
+                        <div class="char__list--text">
+                            <p class="char__list--text--title">포차코</p>
+                            <p class="char__list--text--sub">POCHACCO</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="케로케로케로피 바로가기">
+                        <div class="char__list--thumb">
+                            <img src="images/new_main_crt8.png" alt="캐릭터이미지1">
+                            <span><img src="images/new_main_crt8_ov.png"  alt="캐릭터이미지2"></span>
+                        </div>
+                        <div class="char__list--text">
+                            <p class="char__list--text--title">케로케로케로피</p>
+                            <p class="char__list--text--sub">KEROKEROKEROPPI</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="구데타마 바로가기">
+                        <div class="char__list--thumb">
+                            <img src="images/new_main_crt9.png" alt="캐릭터이미지1">
+                            <span><img src="images/new_main_crt9_ov.png" alt="캐릭터이미지2"></span>
+                        </div>
+                        <div class="char__list--text">
+                            <p class="char__list--text--title">구데타마</p>
+                            <p class="char__list--text--sub">GUDETAMA</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="배드바츠마루 바로가기">
+                        <div class="char__list--thumb">
+                            <img src="images/new_main_crt10.png" alt="캐릭터이미지1">
+                            <span><img src="images/new_main_crt10_ov.png" alt="캐릭터이미지2"></span>
+                        </div>
+                        <div class="char__list--text">
+                            <p class="char__list--text--title">배드바츠마루</p>
+                            <p class="char__list--text--sub">BAD BADTZ-MARU</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="턱시도샘 바로가기">
+                        <div class="char__list--thumb">
+                            <img src="images/new_main_crt11.png" alt="캐릭터이미지1">
+                            <span><img src="images/new_main_crt11_ov.png" alt="캐릭터이미지2"></span>
+                        </div>
+                        <div class="char__list--text">
+                            <p class="char__list--text--title">턱시도샘</p>
+                            <p class="char__list--text--sub">TUXEDOSAM</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="코기뮹 바로가기">
+                        <div class="char__list--thumb">
+                            <img src="images/new_main_crt12.png" alt="캐릭터이미지1">
+                            <span><img src="images/new_main_crt12_ov.png" alt="캐릭터이미지2"></span>
+                        </div>
+                        <div class="char__list--text">
+                            <p class="char__list--text--title">코기뮹</p>
+                            <p class="char__list--text--sub" style="text-transform:none;">Cogimyun</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="딩구리데이즈 바로가기">
+                        <div class="char__list--thumb">
+                            <img src="images/new_main_crt13.png" alt="캐릭터이미지1">
+                            <span><img src="images/new_main_crt13_ov.png" alt="캐릭터이미지2"></span>
+                        </div>
+                        <div class="char__list--text">
+                            <p class="char__list--text--title">딩구리데이즈</p>
+                            <p class="char__list--text--sub" style="text-transform:none;">Marumofubiyori</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="숲의요정 페어리루 바로가기">
+                        <div class="char__list--thumb">
+                            <img src="images/new_main_crt14.png" alt="캐릭터이미지1">
+                            <span><img src="images/new_main_crt14_ov.png" alt="캐릭터이미지2"></span>
+                        </div>
+                        <div class="char__list--text">
+                            <p class="char__list--text--title">숲의요정 페어리루</p>
+                            <p class="char__list--text--sub">RILU RILU FAIRILU</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="어그레츠코 바로가기">
+                        <div class="char__list--thumb">
+                            <img src="images/new_main_crt15.png" alt="캐릭터이미지1">
+                            <span><img src="images/new_main_crt15_ov.png" alt="캐릭터이미지2"></span>
+                        </div>
+                        <div class="char__list--text">
+                            <p class="char__list--text--title">어그레츠코</p>
+                            <p class="char__list--text--sub" style="text-transform:none;">Aggretsuko</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="꿈속의 뮤 바로가기">
+                        <div class="char__list--thumb">
+                            <img src="images/new_main_crt16.png" alt="캐릭터이미지">
+                            <span><img src="images/new_main_crt16_ov.png" alt="캐릭터이미지"></span>
+                        </div>
+                        <div class="char__list--text">
+                            <p class="char__list--text--title">꿈속의 뮤</p>
+                            <p class="char__list--text--sub" style="text-transform:none;">Mewkledreamy</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!--//char-->
+        <section class="com company">
+            <h3 class="com__title title">COMPANY</h3>
+            <dl class="com__box">
+                <img src="images/ico_company1.png" alt="회사소개 아이콘">
+                <dt class="com__box--title">회사소개</dt>
+                <dd class="com__box--con">맑고 깨끗한 강가에<br/>문화를 쌓아 올리자</dd>
+                <button onClick="location.href='#'" class="com__box--btn moreBtn">MORE</button>
+            </dl>
+            <!--//com__box-->
+            <dl class="com__box">
+                <img src="images/ico_company3.png" alt="회사연혁 아이콘">
+                <dt class="com__box--title">회사연혁</dt>
+                <dd class="com__box--con">산리오의 히스토리를<br/>확인하세요.</dd>
+                <button onClick="location.href='#'" class="com__box--btn moreBtn">MORE</button>
+            </dl>
+            <!--//com__box-->
+            <dl class="com__box">
+                <img src="images/ico_company4.png" alt="사업영역 아이콘">
+                <dt class="com__box--title">사업영역</dt>
+                <dd class="com__box--con">소셜 커뮤니케이션을<br/>산리오가 시작합니다.</dd>
+                <button onClick="location.href='#'" class="com__box--btn moreBtn">MORE</button>
+            </dl>
+            <!--//com__box-->
+        </section>
+        <!--//company-->
+        <section class="recruit">
+            <h3 class="recruit__title title">RECRUIT</h3>
+            <div class="recruit__box">
+                <div class="recruit__box--ico">
+                    <img src="images/ico_recruit1.png" alt="채용공고 아이콘">
+                </div>
+                <dl class="recruit__box--con">
+                    <dt class="recruit__box--con--title">채용공고</dt>
+                    <dd class="recruit__box--con--sub">산리오코리아에서<br/>인재를 찾습니다</dd>
+                    <button onClick="location.href='#'" class="recruit__box--con--btn moreBtn">MORE</button>
+                </dl>
+                <!--//recruit__box--con-->
+            </div>
+            <!--//recruit__box-->
+            <div class="recruit__box">
+                <div class="recruit__box--ico">
+                    <img src="images/ico_recruit2.png" alt="직무소개 아이콘">
+                </div>
+                <dl class="recruit__box--con">
+                    <dt class="recruit__box--con--title">직무소개</dt>
+                    <dd class="recruit__box--con--sub">산리오코리아에서는<br/>어떤 일을 할까요?</dd>
+                    <button onClick="location.href='#'" class="recruit__box--con--btn moreBtn">MORE</button>
+                </dl>
+                <!--//recruit__box--con-->
+            </div>
+            <!--//recruit__box-->
+            <div class="recruit__box">
+                <div class="recruit__box--ico">
+                    <img src="images/ico_recruit3.png" alt="복리후생 아이콘">
+                </div>
+                <dl class="recruit__box--con">
+                    <dt class="recruit__box--con--title">복리후생</dt>
+                    <dd class="recruit__box--con--sub">산리오코리아에서<br/>누릴 수 있는것!</dd>
+                    <button onClick="location.href='#'" class="recruit__box--con--btn moreBtn">MORE</button>
+                </dl>
+                <!--//recruit__box--con-->
+            </div>
+            <!--//recruit__box-->
+        </section>
+        <!--//recruit-->
+        <section class="place">
+            <h3 class="place__title title">PLACE</h3>
+            <button onclick="location.href='#'" class="place__moreBtn longMoreBtn">
+                <span>PLACE MORE</span>
+            </button>
+        </section>
+        <!--//place-->
+        <section class="contact">
+            <h3 class="contact__title title">
+                <img src="images/logo_w.png" alt="로고"><br/>
+                CONTACT US
+            </h3>
+            <button onclick="location.href='#'" class="contact__moreBtn longMoreBtn">
+                <span>VIEW DETAIL</span>
+            </button>
+        </section>
     </main>
     <footer>
 
@@ -52,26 +341,31 @@
 
 <script src="js/jquery-3.5.1.js"></script>
 <script>
-    //MOBILE MENU
-jQuery("header .head__ico").click(function() {
-	jQuery(this).toggleClass("active");
-	jQuery("header .head__menu").toggleClass("active");
+    jQuery("header .head__ico").click(function() {
+        jQuery(this).toggleClass("active");
+        jQuery("header .head__menu").toggleClass("active");
 
-	if( jQuery(this).hasClass("active") ){
-		$('body,html').css({
-			"overflow-y" : "hidden",
-			"position" : "fixed",
-			"height" : "100%"
-		});
-	}
-	else{
-		$('body,html').css({
-			"overflow-y" : "scroll",
-			"position" : "initial",
-			"height" : "auto"
-		});
-	}
-});
+        if( jQuery(this).hasClass("active") ){
+            $('html,body').css({
+                "overflow-y" : "hidden",
+                "position" : "fixed",
+                "height" : "100vh",
+                "width" : "100vw"
+            });
+        }
+        else{
+            $('html,body').css({
+                "overflow-y" : "scroll",
+                "position" : "initial",
+                "height" : "auto"
+            });
+        }
+    });
+
+    jQuery(".char__list li").click(function() {
+        if( jQuery(this).find(".hover").css("opacity") == 1 ) jQuery(this).find(".hover").addClass("remove_hover");
+        else jQuery(this).find(".hover").removeClass("remove_hover");
+    });
 </script>
 </body>
 </html>
