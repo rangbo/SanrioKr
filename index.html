@@ -333,28 +333,43 @@
             <button onclick="location.href='#'" class="contact__moreBtn longMoreBtn">
                 <span>VIEW DETAIL</span>
             </button>
-            <div class="contact__mapWr">
-                <!-- * 카카오맵 - 지도퍼가기 -->
-                <!-- 1. 지도 노드 -->
-                <div id="daumRoughmapContainer1662795837072" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-
-                <!--
-                    2. 설치 스크립트
-                    * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
-                -->
-                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-
-                <!-- 3. 실행 스크립트 -->
-                <script charset="UTF-8">
-                    new daum.roughmap.Lander({
-                        "timestamp" : "1662795837072",
-                        "key" : "2bo7s",
-                        "mapWidth" : "640",
-                        "mapHeight" : "460"
-                    }).render();
-                </script>
+            <div class="contact__map">
+                <div class="contact__map--box" id="map">
+                    <!-- * 카카오맵 - 지도퍼가기 -->
+                    <!-- 1. 지도 노드 -->
+                    <div id="daumRoughmapContainer1662795837072" style="width:100%;" class="root_daum_roughmap root_daum_roughmap_landing contact__map--con"></div>
+                    <!--
+                        2. 설치 스크립트
+                        * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                    -->
+                    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+                    <!-- 3. 실행 스크립트 -->
+                    <script charset="UTF-8">
+                        new daum.roughmap.Lander({
+                            "timestamp" : "1662795837072",
+                            "key" : "2bo7s",
+                            // "mapWidth" : "100%",
+                            "mapHeight" : "100%"
+                        }).render();
+                    </script>
+                </div>
+                <!--//contact__map--box-->
+                <div class="contact__map--info">
+                    <h4 class="contact__map--info--tit">서울시 강남구 테헤란로 509, 4층 (삼성동, 엔씨타워1)</h4>
+                    <p class="contact__map--info--eng">
+                        509, TEHERANRO, GANGNAM-GU, SEOUL<br/>
+                        (4TH FLOOR, SAMSUNG-DONG, NC TOWER 1)
+                    </p>
+                    <ul class="contact__map--info--list">
+                        <li><em>M :</em> webmaster@sanriokorea.co.kr</li>
+                        <li><em>T :</em> +82 (0) 2 543 3810</li>
+                        <li><em>F :</em> +82 (0) 2 543 2904</li>
+                    </ul>
+                </div>
+                <!--//contact__map--info-->
+                <p class="contact__map--img"><img src="images/contact_img.png" alt="지도 이미지"></p>
             </div>
-            <!--//contact__mapWr-->
+            <!--//contact__map-->
         </section>
     </main>
     <footer>
@@ -388,6 +403,32 @@
         if( jQuery(this).find(".hover").css("opacity") == 1 ) jQuery(this).find(".hover").addClass("remove_hover");
         else jQuery(this).find(".hover").removeClass("remove_hover");
     });
+</script>
+<script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(37.54699, 127.09598), // 지도의 중심좌표
+        level: 4 // 지도의 확대 레벨
+    };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    var imageSrc = 'images/Pin.png', // 마커이미지의 주소입니다    
+        imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+        imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+        
+    // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+        markerPosition = new kakao.maps.LatLng(37.54699, 127.09598); // 마커가 표시될 위치입니다
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition, 
+        image: markerImage // 마커이미지 설정 
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map);  
 </script>
 </body>
 </html>
