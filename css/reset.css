@@ -23,6 +23,7 @@ time, mark, audio, video {
 *{
 	font-family: 'GmarketSans'; 
 	font-weight: 300;
+	word-break: keep-all;
 }
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {

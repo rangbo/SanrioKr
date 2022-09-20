@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-    <title>Document</title>
+    <title>산리오코리아 Sanrio Korea</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/font.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/mediaQuery.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
 </head>
 <body>
     <header class="head">
@@ -371,9 +372,38 @@
             </div>
             <!--//contact__map-->
         </section>
+        <aside class="sns">
+            <ul>
+                <li><a href="#"><img src="images/i_ins_pc_v3.png" alt="인스타그램아이콘"></a></li>
+                <li><a href="#"><img src="images/i_you_pc_v3.png" alt="유튜브 아이콘"></a></li>
+            </ul>
+        </aside>
+        <div class="goTop">
+            <a href="#" class="goTop--btn top" >
+                <img src="images/top_arr.png" alt="상단이동버튼">
+                <p>TOP</p>
+            </a>
+        </div>
     </main>
     <footer>
-
+        <div class="foot-pc">
+            <ul class="foot-pc__info">
+                <li>㈜산리오코리아 대표 : 유코츠지, 사업자등록번호 : 214-86-24755, Tel : 02-543-3810</li>
+                <li>ADD : 서울시 강남구 테헤란로 509, 4층 (삼성동, 엔씨타워1), E-MAIL : webmaster@sanriokorea.co.kr</li>
+                <li>&copy 2017 sanrio co.,ltd</li>
+            </ul>
+            <button class="foot-pc__term" onClick="location.href='#'">개인정보처리방침</button>
+        </div>
+        <div class="foot-mo" style="display: none;">
+            <button class="foot-mo__term" onClick="location.href='#'">개인정보처리방침</button>
+            <ul class="foot-mo__info">
+                <li>㈜산리오코리아 대표 : 유코츠지</li>
+                <li>사업자등록번호 : 214-86-24755, Tel : 02-543-3810</li>
+                <li>ADD : 서울시 강남구 테헤란로 509, 4층 (삼성동, 엔씨타워1)</li>
+                <li>E-MAIL : webmaster@sanriokorea.co.kr</li>
+                <li>&copy 2017 sanrio co.,ltd</li>
+            </ul>
+        </div>
     </footer>
 
 <script src="js/jquery-3.5.1.js"></script>
@@ -403,32 +433,19 @@
         if( jQuery(this).find(".hover").css("opacity") == 1 ) jQuery(this).find(".hover").addClass("remove_hover");
         else jQuery(this).find(".hover").removeClass("remove_hover");
     });
-</script>
-<script>
-    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = { 
-        center: new kakao.maps.LatLng(37.54699, 127.09598), // 지도의 중심좌표
-        level: 4 // 지도의 확대 레벨
-    };
 
-    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-    var imageSrc = 'images/Pin.png', // 마커이미지의 주소입니다    
-        imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
-        imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
-        
-    // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
-        markerPosition = new kakao.maps.LatLng(37.54699, 127.09598); // 마커가 표시될 위치입니다
-
-    // 마커를 생성합니다
-    var marker = new kakao.maps.Marker({
-        position: markerPosition, 
-        image: markerImage // 마커이미지 설정 
+    $( window ).scroll( function() {
+        if ( $( this ).scrollTop() > 200 ) {
+            $( '.top, .goTop' ).fadeIn();
+        } else {
+            $( '.top, .goTop' ).fadeOut();
+        }
     });
-
-    // 마커가 지도 위에 표시되도록 설정합니다
-marker.setMap(map);  
+    
+    $( '.top' ).click( function() {
+        $( 'html, body' ).animate( { scrollTop : 0 }, 400 );
+        return false;
+    });
 </script>
 </body>
 </html>
