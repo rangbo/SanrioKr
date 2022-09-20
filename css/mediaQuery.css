@@ -158,6 +158,7 @@
         background-image: url("../images/mbg_recruit.png") no-repeat center;
         background-size: 90%;
         background-position: center 30px;
+        padding: 85px 30px;
     }
     main .recruit__box{
         display: flex;
@@ -173,6 +174,7 @@
         background-image: url("../images/mbg_shop.jpg");
         background-size: cover;
     }
+    main .sns{top:12%;}
 }
 
 @media screen and (max-width: 767px) {
@@ -222,4 +224,11 @@
         right:-15%;
     }
     main .contact__map--img img{max-width: 50%;}
+    footer {padding:50px 30px;}
+    footer .foot-mo__term{
+        font-size: 14px;
+        width: 170px !important;
+        height: 40px !important;
+    }
+    footer .foot-mo__info li{font-size: 13px;}
 }
